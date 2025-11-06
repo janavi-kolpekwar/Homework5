@@ -16,10 +16,15 @@ y <- as(y0, "sparse_numeric")
 ## Run benchmarks
 
 ## Compare addition
-microbenchmark(x + y, x0 + y0)
+add_bench <- microbenchmark(x + y, x0 + y0)
 
 ## Compare subtraction
-microbenchmark(x - y, x0 - y0)
+sub_bench <- microbenchmark(x - y, x0 - y0)
 
 ## Compare multiplication
-microbenchmark(x * y, x0 * y0)
+mult_bench <- microbenchmark(x * y, x0 * y0)
+
+# print results
+add_bench
+sub_bench
+mult_bench
